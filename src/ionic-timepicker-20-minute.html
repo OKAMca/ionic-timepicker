@@ -4,7 +4,7 @@
       <button type="button" class="button button-clear button-small button-dark timePickerArrows marginBottom10"
               ng-click="increaseMinutes()">
         <i class="icon ion-chevron-up"></i></button>
-      <input type="text" placeholder="" ng-model="time.minutes" class="ipBoxes timePickerBoxText" disabled>
+      <input type="text" placeholder="" ng-model="time.minutes" class="ipBoxes timePickerBoxText" maxlength="2" pattern="[0-9]{2}">
       <button type="button" class="button button-clear button-small button-dark timePickerArrows marginTop10"
               ng-click="decreaseMinutes()">
         <i class="icon ion-chevron-down"></i></button>
@@ -13,7 +13,7 @@
     <span class="button-small col col-25">
       <button type="button" class="button button-clear button-small button-dark timePickerArrows marginBottom10"
               ng-click="increaseSeconds()"><i class="icon ion-chevron-up"></i></button>
-      <input type="text" placeholder="" ng-model="time.seconds" class="ipBoxes timePickerBoxText" disabled>
+      <input type="text" placeholder="" ng-model="time.seconds" class="ipBoxes timePickerBoxText" maxlength="2", pattern="[0-9]{2}">
       <button type="button" class="button button-clear button-small button-dark timePickerArrows marginTop10"
               ng-click="decreaseSeconds()"><i class="icon ion-chevron-down"></i></button>
     </span>

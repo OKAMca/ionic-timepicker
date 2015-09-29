@@ -272,16 +272,21 @@
                   text: scope.closeLabel,
                   type: scope.closeButtonType,
                   onTap: function (e) {
-                    scope.inputObj.callback(undefined);
+                    //scope.inputObj.callback(undefined);
                   }
                 },
                 {
                   text: scope.setLabel,
                   type: scope.setButtonType,
                   onTap: function (e) {
-                    scope.loadingContent = true;
-                    scope.etime = scope.getSeconds();
-                    scope.inputObj.callback(scope.etime);
+                    if (isNaN(scope.time.seconds) || isNaN(scope.time.minutes)) {
+                      e.preventDefault();
+                      return;
+                    } else {
+                      scope.loadingContent = true;
+                      scope.etime = scope.getSeconds();
+                      scope.inputObj.callback(scope.etime);
+                    }
                   }
                 }
               ]
